@@ -1235,3 +1235,4 @@ after sign up with email and password, have been fixed.
 - A new config parameter has been added: `signInFlow`. It allows to specify
 whether the Identity Providers sign in flows should be done through `redirect`
 (the default) or `popup`. See [Sign In Flows](sign-in-flows).
+

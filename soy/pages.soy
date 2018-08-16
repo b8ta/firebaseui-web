@@ -33,7 +33,9 @@
       </div>
       <div class="firebaseui-card-content">
         <div class="firebaseui-relative-wrapper">
-          {call firebaseui.auth.soy2.element.email data="all" /}
+          {call firebaseui.auth.soy2.element.email data="all" }
+            {param disabled: isNonnull($email) ? true : false /}
+          {/call}
         </div>
       </div>
       <div class="firebaseui-card-actions">

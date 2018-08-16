@@ -475,7 +475,8 @@ firebaseui.auth.widget.Config.prototype.getProviderCustomParameters =
     var clonedCustomParameters = goog.object.clone(customParameters);
     // Delete login_hint from provider (only Google supports it) as it could
     // break the flow.
-    if (providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID) {
+    if (providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID ||
+        providerId === firebase.auth.EmailAuthProvider.PROVIDER_ID) {
       delete clonedCustomParameters['login_hint'];
     }
     return clonedCustomParameters;

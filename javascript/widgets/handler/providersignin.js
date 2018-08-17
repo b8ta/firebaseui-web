@@ -46,7 +46,7 @@ firebaseui.auth.widget.handler.handleProviderSignIn = function(
           component.dispose();
           // Handle sign in with email.
           firebaseui.auth.widget.handler.common.handleSignInWithEmail(
-              app, container, app.getConfig().getProviderCustomParameters(providerId)['login_hint']);
+              app, container);
         } else if (providerId ==
                    firebase.auth.PhoneAuthProvider.PROVIDER_ID) {
           // User clicks sign in with phone number button.

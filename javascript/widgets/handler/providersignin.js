@@ -44,9 +44,11 @@ firebaseui.auth.widget.handler.handleProviderSignIn = function(
         if (providerId == firebase.auth.EmailAuthProvider.PROVIDER_ID) {
           // User clicks create password account button.
           component.dispose();
+          var customParameters = app.getConfig().getProviderCustomParameters(providerId)
           // Handle sign in with email.
+          var loginHint = customParameters && customParameters['login_hint']
           firebaseui.auth.widget.handler.common.handleSignInWithEmail(
-              app, container);
+              app, container, loginHint);
         } else if (providerId ==
                    firebase.auth.PhoneAuthProvider.PROVIDER_ID) {
           // User clicks sign in with phone number button.
